@@ -27,7 +27,7 @@ const HeroSection = () => {
                     repeat={Infinity}
                 />
             </h1>
-          <p className='text-[#ADB7BE] text-base sm:text-lg text-lg mb-6 lg:text-xl'>
+          <p className='text-[#ADB7BE] sm:text-lg text-lg mb-6 lg:text-xl'>
            Welcome to my Portfolio Website! Here you can see all of my Projects, Experiences, and Skills that I've built as a Programmer. However, if you want to know about me more as a person, then there's that too! 
            If you feel the need to contact me or want more information then feel free to click on one of the links below.
           </p>
