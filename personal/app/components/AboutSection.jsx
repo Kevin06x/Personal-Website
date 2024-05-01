@@ -1,0 +1,97 @@
+"use client";
+import React, { useState, useTransition } from 'react';
+import Image from 'next/image';
+import TabButton from './TabButton';
+
+const TAB_DATA = [
+    {
+        title: 'Skills',
+        id: 'skills',
+        content: (
+            <div className= 'text-lg md:text-xl text-[#0044FF] font-bold' style={{display:'flex'}}>
+                <ul style={{marginRight: '20px'}}>
+                    <li>React.js</li>
+                    <li>React Native</li>
+                    <li>JavaScript</li>
+                    <li>Java</li>
+                    <li>C++</li>
+                    <li>Python</li>
+                </ul>
+                <ul>
+                    <li>Firebase</li>
+                    <li>Express</li>
+                    <li>Next.js</li>
+                    <li>Node.js</li>
+                    <li>Flask</li>
+                    <li>DJango</li>
+                    <li>MongoDB</li>
+                </ul>
+            </div>
+        )
+    },
+    {
+        title: 'Education',
+        id: 'education',
+        content: (
+            <ul className= 'text-lg md:text-xl text-[#0044FF] font-bold'>
+               <li>UC</li>
+               <li>Orange Coast College</li>
+               <li>Muffles College High School</li>
+            </ul>
+        )
+    },
+    {
+        title: 'Experience',
+        id: 'experience',
+        content: (
+            <ul className= 'text-lg md:text-xl text-[#0044FF] font-bold'>
+                <li>Data Analyst - Orange Coast College</li>
+                <li>Bookseller - Barnes & Nobles</li>
+                <li>Cashier - Chicciety</li>
+            </ul>
+        )
+    }
+]
+
+const AboutSection = () => {
+    const [tab, setTab] = useState("skills");
+    const [isPending, startTransition] = useTransition();
+
+    const handleTabChange = (id) => {
+        startTransition(() => {
+            setTab(id);
+        });
+    }
+  return (
+    <section className='text-white'>
+        <div className='md:grid md:grid-cols-2 gap-8 items-start py-8 px-4 xl:gap-16 sm:py-16 xl:py-16'>
+            <Image src='/Images/pfpbig.jpg' width={400} height={300} style={{borderRadius:'15px'}}/>
+            <div className='mt-4 md:mt-0 text-left flex flex-col h-full'>
+                <h2 className='text-4xl font-bold text-white mb-4 pt-5' style={{ textDecoration: 'underline' }}>About Me</h2>
+                <p className='md:text-lg text-[#ADB7BE] sm:text-lg text-lg mb-6 lg:text-xl'> I am a undergraduate Computer Science Student that is graduating in 2026 with a burning passion to learn
+                    more about programming and love the process of creating/designing. I have experience working with React, React Native, JavaScript, Node.js,
+                    Express.js, HTML, CSS, Git, Python, Java, C++, and many other technologies. I am a quick learner and I am always looking to expand
+                    my knowledge and skill set through practical experiences and collabrations. If you have any cool ideas or want to collaberate then 
+                    definitely let me know!
+                </p>
+                <div className='flex flex-row mt-8'>
+                    <TabButton selectTab={() => handleTabChange("skills")} active={tab === "skills"}>
+                        Skills
+                    </TabButton>
+                    <TabButton selectTab={() => handleTabChange("education")} active={tab === "education"}>
+                        Education
+                    </TabButton>
+                    <TabButton selectTab={() => handleTabChange("experience")} active={tab === "experience"}>
+                        Experience
+                    </TabButton>
+                </div>
+                <div className='mt-8' style={{ minHeight: '300px' }}>
+                    {TAB_DATA.find((t) => t.id === tab).content}
+                </div>
+            </div>
+        </div>
+    </section>
+  );
+};
+
+export default AboutSection;
