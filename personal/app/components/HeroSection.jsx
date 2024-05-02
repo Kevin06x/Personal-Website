@@ -32,16 +32,21 @@ const HeroSection = () => {
            If you feel the need to contact me or want more information then feel free to click on one of the links below.
           </p>
           <div>
-            <button className='px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-zinc-200 via-zinc-400 to-zinc-600 hover:bg-slate-600 text-black'>
-                <strong>Github</strong>
+          <a href="https://github.com/Kevin06x" target="_blank">
+            <button className='px-11 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-zinc-200 via-zinc-400 to-zinc-600 hover:bg-slate-600 text-black'>
+                <strong className='text-lg'>Github</strong>
             </button>
-            <button className='px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-zinc-200 via-zinc-400 to-zinc-600 hover:bg-slate-100 text-white mt-3 '>
-                <span className='block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2'><strong>LinkedIn</strong></span>
-            </button>
+            </a>
+            <a href="https://www.linkedin.com/in/kevin06x/" target='_blank'>
+              <button className='px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-zinc-200 via-zinc-400 to-zinc-600 hover:bg-slate-100 text-white mt-3'>
+                  <span className='block bg-[#121212] hover:bg-slate-800 rounded-full px-10 py-2'>
+                    <strong className='text-lg'>LinkedIn</strong></span>
+              </button>
+            </a>
           </div>
         </div>
         <div className='col-span-5 lg:col-span-5 flex justify-center lg:justify-end'>
-          <div className="rounded-full w-[250px] h-[250px] lg:w-[350px] lg:h-[350px] relative">
+          <div className="rounded-full w-[300] h-[300] lg:w-[350px] lg:h-[350px] relative pl-8">
                 <Image
                   src="/Images/main.jpg"
                   alt="Main Image"

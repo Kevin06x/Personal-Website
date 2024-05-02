@@ -2,38 +2,21 @@
 import React, { useState, useTransition } from 'react';
 import Image from 'next/image';
 import TabButton from './TabButton';
+import SkillsList from './SkillsList';
 
 const TAB_DATA = [
     {
         title: 'Skills',
         id: 'skills',
         content: (
-            <div className= 'text-lg md:text-xl text-[#0044FF] font-bold' style={{display:'flex'}}>
-                <ul style={{marginRight: '20px'}}>
-                    <li>React.js</li>
-                    <li>React Native</li>
-                    <li>JavaScript</li>
-                    <li>Java</li>
-                    <li>C++</li>
-                    <li>Python</li>
-                </ul>
-                <ul>
-                    <li>Firebase</li>
-                    <li>Express</li>
-                    <li>Next.js</li>
-                    <li>Node.js</li>
-                    <li>Flask</li>
-                    <li>DJango</li>
-                    <li>MongoDB</li>
-                </ul>
-            </div>
+            <SkillsList />
         )
     },
     {
         title: 'Education',
         id: 'education',
         content: (
-            <ul className= 'text-lg md:text-xl text-[#0044FF] font-bold'>
+            <ul className= 'text-lg md:text-xl text-white font-bold'>
                <li>UC</li>
                <li>Orange Coast College</li>
                <li>Muffles College High School</li>
@@ -44,7 +27,7 @@ const TAB_DATA = [
         title: 'Experience',
         id: 'experience',
         content: (
-            <ul className= 'text-lg md:text-xl text-[#0044FF] font-bold'>
+            <ul className= 'text-lg md:text-xl text-white font-bold'>
                 <li>Data Analyst - Orange Coast College</li>
                 <li>Bookseller - Barnes & Nobles</li>
                 <li>Cashier - Chicciety</li>
@@ -64,9 +47,10 @@ const AboutSection = () => {
     }
   return (
     <section className='text-white'>
-        <div className='md:grid md:grid-cols-2 gap-8 items-start py-8 px-4 xl:gap-16 sm:py-16 xl:py-16'>
-            <Image src='/Images/pfpbig.jpg' width={400} height={300} style={{borderRadius:'15px'}}/>
-            <div className='mt-4 md:mt-0 text-left flex flex-col h-full'>
+        <div className='md:grid md:grid-cols-[auto,1fr] gap-8 items-start py-8 px-4 xl:gap-16 sm:py-16 xl:py-16'>
+        <div className="relative w-80 h-[400px] md:w-80 md:h-[500px]" style={{ paddingBottom: '75%' }}>
+        <Image src='/Images/pfpbig.jpg' layout="fill" objectFit="cover" style={{borderRadius:'15px'}} />            </div>
+            <div className='mt-4 md:mt-0 text-l flex flex-col h-full'>
                 <h2 className='text-4xl font-bold text-white mb-4 pt-5' style={{ textDecoration: 'underline' }}>About Me</h2>
                 <p className='md:text-lg text-[#ADB7BE] sm:text-lg text-lg mb-6 lg:text-xl'> I am a undergraduate Computer Science Student that is graduating in 2026 with a burning passion to learn
                     more about programming and love the process of creating/designing. I have experience working with React, React Native, JavaScript, Node.js,
