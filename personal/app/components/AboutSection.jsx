@@ -48,7 +48,7 @@ const AboutSection = () => {
   return (
     <section className='text-white'>
         <div className='md:grid md:grid-cols-[auto,1fr] gap-8 items-start py-8 px-4 xl:gap-16 sm:py-16 xl:py-16'>
-        <div className="relative w-80 h-[400px] md:w-80 md:h-[500px]" style={{ paddingBottom: '75%' }}>
+        <div className="relative w-full h-[400px] sm:w-80 md:h-[500px]" style={{ paddingBottom: '75%' }}>
         <Image src='/Images/pfpbig.jpg' layout="fill" objectFit="cover" style={{borderRadius:'15px'}} />            </div>
             <div className='mt-4 md:mt-0 text-l flex flex-col h-full'>
                 <h2 className='text-4xl font-bold text-white mb-4 pt-5' style={{fontFamily: 'Work Sans, sans-serif', fontWeight: 600, fontStyle: 'normal'}}>About Me</h2>
@@ -58,7 +58,7 @@ const AboutSection = () => {
                     my knowledge and skill set through practical experiences and collabrations. If you have any cool ideas or want to collaberate then 
                     definitely let me know!
                 </p>
-                <div className='flex flex-row mt-8'>
+                <div className='flex sm:flex-row flex-col mt-8'>
                     <TabButton selectTab={() => handleTabChange("skills")} active={tab === "skills"}>
                         Skills
                     </TabButton>
