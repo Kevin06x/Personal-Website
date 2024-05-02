@@ -8,14 +8,14 @@ const HeroSection = () => {
     <section className="container mx-auto px-4 lg:px-0">
       <div className='grid grid-cols-1 lg:grid-cols-12 gap-4'>
         <div className="col-span-7 lg:col-span-7 flex flex-col justify-center text-center sm:text-left">
-          <h1 className="text-white mb-4 text-4xl sm:text-5xl  lg:text-6xl font-extrabold">
-                <span className='text-transparent bg-clip-text bg-gradient-to-r from-zinc-200 via-zinc-300 to-zinc-400'>Hello, I'm{" "}</span>
+          <h1 className="text-white mb-4 text-3xl sm:text-5xl  lg:text-6xl font-extrabold">
+                <span className='text-transparent bg-clip-text bg-gradient-to-r from-zinc-200 via-zinc-300 to-zinc-400'>Hello, I'm Kevin{" "}</span>
                 <br></br>
                 <TypeAnimation
                     sequence={[
-                        "Kevin",
+                        "a Data Analyst",
                         1000,
-                        "Computer Science Student",
+                        "a Computer Science Student",
                         1000,
                         "a Software Engineer",
                         1000,
