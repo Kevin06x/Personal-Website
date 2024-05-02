@@ -47,7 +47,7 @@ const HeroSection = () => {
           </div>
         </div>
         <div className='col-span-5 lg:col-span-5 flex justify-center lg:justify-end'>
-          <div className="rounded-full w-[300] h-[300] lg:w-[350px] lg:h-[350px] relative pl-8">
+          <div className="rounded-full w-[300px] h-[300px] lg:w-[350px] lg:h-[350px] relative pl-8">
                 <Image
                   src="/Images/main.jpg"
                   alt="Main Image"
