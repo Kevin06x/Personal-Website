@@ -51,8 +51,8 @@ const AboutSection = () => {
         <div className="relative w-80 h-[400px] md:w-80 md:h-[500px]" style={{ paddingBottom: '75%' }}>
         <Image src='/Images/pfpbig.jpg' layout="fill" objectFit="cover" style={{borderRadius:'15px'}} />            </div>
             <div className='mt-4 md:mt-0 text-l flex flex-col h-full'>
-                <h2 className='text-4xl font-bold text-white mb-4 pt-5' style={{ textDecoration: 'underline' }}>About Me</h2>
-                <p className='md:text-lg text-[#ADB7BE] sm:text-lg text-lg mb-6 lg:text-xl'> I am a undergraduate Computer Science Student that is graduating in 2026 with a burning passion to learn
+                <h2 className='text-4xl font-bold text-white mb-4 pt-5' style={{fontFamily: 'Work Sans, sans-serif', fontWeight: 600, fontStyle: 'normal'}}>About Me</h2>
+                <p className='md:text-lg text-[#ADB7BE] sm:text-lg text-lg mb-6 lg:text-xl font-bold' style={{fontFamily: 'Work Sans, sans-serif', fontWeight: 600, fontStyle: 'normal'}}> I am a undergraduate Computer Science Student that is graduating in 2026 with a burning passion to learn
                     more about programming and love the process of creating/designing. I have experience working with React, React Native, JavaScript, Node.js,
                     Express.js, HTML, CSS, Git, Python, Java, C++, and many other technologies. I am a quick learner and I am always looking to expand
                     my knowledge and skill set through practical experiences and collabrations. If you have any cool ideas or want to collaberate then 

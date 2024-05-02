@@ -29,10 +29,10 @@ const navLinks = [
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   return (
-    <nav className='fixed top-0 left-0 right-0 z-10 bg-[#1E1E1E] bg-opacity-95 h-25'>
+    <nav className='fixed top-0 left-0 right-0 z-10 bg-[#1E1E1E] bg-opacity-95'>
         <div className='flex flex-wrap items-center justify-between mx-auto px-8 py-2'>
             <Link href={"https://kevin06x.pythonanywhere.com" } target="_blank">
-            <Image src={"/Images/kevin-high-resolution-logo2.png"} alt="Logo" width={200} height={40} />
+            <Image src={"/Images/kevin-high-resolution-logo2.png"} alt="Logo" width={150} height={40} />
             </Link>
             <div className='mobile-menu block md:hidden'>
                 { !navbarOpen ? (
