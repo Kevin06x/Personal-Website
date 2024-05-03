@@ -3,6 +3,7 @@ import React, { useState, useTransition } from 'react';
 import Image from 'next/image';
 import TabButton from './TabButton';
 import SkillsList from './SkillsList';
+import EducationSection from './EducationSection';
 
 const TAB_DATA = [
     {
@@ -16,11 +17,7 @@ const TAB_DATA = [
         title: 'Education',
         id: 'education',
         content: (
-            <ul className= 'text-lg md:text-xl text-white font-bold'>
-               <li>UC</li>
-               <li>Orange Coast College</li>
-               <li>Muffles College High School</li>
-            </ul>
+            <EducationSection />
         )
     },
     {
@@ -52,8 +49,8 @@ const AboutSection = () => {
         <Image src='/Images/pfpbig.jpg' layout="fill" style={{borderRadius:'15px', objectFit: "cover"}} />       
              </div>
             <div className='mt-4 md:mt-0 text-l flex flex-col h-full'>
-                <h2 className='text-4xl font-bold text-white mb-4 pt-5' style={{fontFamily: 'Work Sans, sans-serif', fontWeight: 600, fontStyle: 'normal'}}>About Me</h2>
-                <p className='md:text-lg text-[#ADB7BE] sm:text-lg text-lg mb-6 lg:text-xl font-bold' style={{fontFamily: 'Work Sans, sans-serif', fontWeight: 600, fontStyle: 'normal'}}> I am a undergraduate Computer Science Student that is graduating in 2026 with a burning passion to learn
+                <h2 className='text-5xl font-bold text-white mb-4 pt-5'>About Me</h2>
+                <p className='md:text-lg text-[#ADB7BE] sm:text-lg text-lg mb-6 lg:text-xl font-bold' style={{fontFamily: 'Source Code Pro, monospace', fontWeight: 600, fontStyle: 'normal'}}> I am a undergraduate Computer Science Student that is graduating in 2026 with a burning passion to learn
                     more about programming and love the process of creating/designing. I have experience working with React, React Native, JavaScript, Node.js,
                     Express.js, HTML, CSS, Git, Python, Java, C++, and many other technologies. I am a quick learner and I am always looking to expand
                     my knowledge and skill set through practical experiences and collabrations. If you have any cool ideas or want to collaberate then 
