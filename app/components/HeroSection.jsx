@@ -9,7 +9,7 @@ const HeroSection = () => {
       <div className='grid grid-cols-1 lg:grid-cols-12 gap-4'>
         <div className="col-span-7 lg:col-span-7 flex flex-col justify-center text-center sm:text-left">
           <h1 className="text-white mb-4 text-3xl sm:text-5xl  lg:text-6xl font-extrabold ">
-                <span className='text-transparent bg-clip-text bg-gradient-to-r from-zinc-200 via-zinc-300 to-zinc-400'>Hello, I'm Kevin,{" "}</span>
+                <span className='text-transparent bg-clip-text bg-gradient-to-r from-zinc-200 via-zinc-300 to-zinc-400'>Hello, I&apos;m Kevin,{" "}</span>
                 <br></br>
                 <TypeAnimation
                     sequence={[
@@ -28,7 +28,7 @@ const HeroSection = () => {
                 />
             </h1>
           <p className='text-[#ADB7BE] sm:text-lg text-lg mb-6 lg:text-xl' style={{fontFamily: 'Source Code Pro, monospace', fontWeight: 600, fontStyle: 'normal'}}>
-           Welcome to my Portfolio Website! Here you can see all of my Projects, Experiences, and Skills that I've built as a Programmer. However, if you want to know about me more as a person, then there's that too! 
+           Welcome to my Portfolio Website! Here you can see all of my Projects, Experiences, and Skills that I&apos;ve built as a Programmer. However, if you want to know about me more as a person, then there&apos;'s that too! 
            If you feel the need to contact me or want more information then feel free to click on one of the links below.
           </p>
           <div>

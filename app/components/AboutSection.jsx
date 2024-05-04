@@ -43,7 +43,7 @@ const AboutSection = () => {
     <section className='text-white'>
         <div className='md:grid md:grid-cols-[auto,1fr] gap-8 items-start py-8 px-4 xl:gap-16 sm:py-16 xl:py-16'>
         <div className="relative w-full h-[400px] sm:w-80 md:h-[500px]" style={{ paddingBottom: '75%' }}>
-        <Image src='/Images/pfpbig.jpg' layout="fill" style={{borderRadius:'15px', objectFit: "cover"}} />       
+        <Image src='/Images/pfpbig.jpg' alt='Profile' layout="fill" style={{borderRadius:'15px', objectFit: "cover"}} />       
              </div>
             <div className='mt-4 md:mt-0 text-l flex flex-col h-full'>
                 <h2 className='text-5xl font-bold text-white mb-4 pt-5'>About Me</h2>
