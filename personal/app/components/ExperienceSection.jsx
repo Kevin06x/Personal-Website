@@ -7,43 +7,25 @@ import { GiChicken } from "react-icons/gi";
 
 const experiences = [
   {
-    title: "Data Analyst",
-    company_name: "Orange Coast College",
+    title: "Data Analyst - Orange Coast College",
     icon: <FaDatabase/>,
     iconBg: "black",
     date: "October 2023 - Present",
-    points: [
-      "Analyzing Data",
-      "Collaberating with team",
-      "Troubleshooting systems",
-      "Coding a web pages",
-    ],
+    description: "I Worked as a Data Analyst",
   },
   {
-    title: "Cashier",
-    company_name: "Chicciety",
+    title: "Cashier - Chicciety",
     icon: <GiChicken />,
     iconBg: "black",
-    date: "November 2022 - September 2023",
-    points: [
-      "Communicated Efficiently with team members and customers",
-      "Provided excellent service",
-      "Worked in a stressful environment",
-      "Regularly cooked food and helped inventory",
-    ],
+    date: "November 2022 - July 2023",
+    description: "I worked as a Cashier",
   },
   {
-    title: "Bookseller",
-    company_name: "Barnes & Nobles",
+    title: "Bookseller - Barnes & Nobles",
     icon: <FaBook />,
     iconBg: "black",
-    date: "August-September 2022/2023",
-    points: [
-      "Trouble Shooting Systems",
-      "Inputting, Outputting and Managing databases",
-      "Worked as customer Service",
-      "Quick on my feet",
-    ],
+    date: "August - September 2022/2023",
+    description: "I worked as a Bookseller",
   },
 ];
 
@@ -51,7 +33,7 @@ const ExperienceSection = () => {
   return (
     <>
     <div className='flex flex-col items-start '>
-        <VerticalTimeline>
+        <VerticalTimeline layout="1-column-left">
         {experiences.map((experience, index) => (
             <ExperienceCard
               key={`experience-${index}`}
