@@ -4,6 +4,7 @@ import Image from 'next/image';
 import TabButton from './TabButton';
 import SkillsList from './SkillsList';
 import EducationSection from './EducationSection';
+import ExperienceSection from './ExperienceSection';
 
 const TAB_DATA = [
     {
@@ -24,11 +25,7 @@ const TAB_DATA = [
         title: 'Experience',
         id: 'experience',
         content: (
-            <ul className= 'text-lg md:text-xl text-white font-bold'>
-                <li>Data Analyst - Orange Coast College</li>
-                <li>Bookseller - Barnes & Nobles</li>
-                <li>Cashier - Chicciety</li>
-            </ul>
+            <ExperienceSection />
         )
     }
 ]
