@@ -41,7 +41,7 @@ const AboutSection = () => {
     }
 return (
     <section className='text-white'>
-        <div className='md:grid md:grid-cols-[auto,1fr] gap-8 items-start py-8 px-4 xl:gap-16 sm:py-16 xl:py-16'>
+        <div className='md:grid md:grid-cols-[auto,1fr] gap-8 items-start py-8 px-4 xl:gap-16 sm:py-16 xl:py-16 h-fit'>
         <div className="relative w-full h-[400px] sm:w-80 md:h-[500px]" style={{ paddingBottom: '75%' }}>
         <Image src='/Images/pfpbig.jpg' alt='Profile' layout="fill" style={{borderRadius:'15px', objectFit: "cover"}} />
              </div>
@@ -64,7 +64,7 @@ return (
                         Experience
                     </TabButton>
                 </div>
-                <div className='mt-8' style={{ minHeight: '300px' }}>
+                <div className='mt-8' style={{ minHeight: '150px' }}>
                     {TAB_DATA.find((t) => t.id === tab).content}
                 </div>
             </div>
