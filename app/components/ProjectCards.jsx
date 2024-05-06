@@ -84,7 +84,7 @@ const ProjectCards = () => {
         <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 place-items-center gap-6'>
           {ProjectsData.map(({ id, image, title, description, demo, repo }) => {
             return (
-              <div key={id} className='text-white shadow-md rounded-lg overflow-hidden relative group pt-5 pb-5'>
+              <div key={id} className='text-white shadow-md rounded-lg overflow-hidden relative group mt-5 mb-5'>
                 <img src={image} alt={title} className='w-full max-w-[400px] h-[275px] rounded-lg' />
                 <div className='absolute left-0 top-[-100%] text-white opacity-0 group-hover:opacity-100 group-hover:top-[0] p-4 w-full h-full bg-black/60 backdrop-blur-sm duration-500'>
                   <div className='space-y-4'>
