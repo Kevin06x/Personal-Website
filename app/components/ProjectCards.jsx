@@ -81,7 +81,7 @@ const ProjectCards = () => {
             )}
           </span>
         </div>
-        <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 place-items-center gap-6'>
+        <div className='grid sm:grid-cols-1 lg:grid-cols-3 place-items-center gap-6'>
           {ProjectsData.map(({ id, image, title, description, demo, repo }) => {
             return (
               <div key={id} className='text-white shadow-md rounded-lg overflow-hidden relative group'>
