@@ -6,7 +6,7 @@ import { TypeAnimation } from 'react-type-animation';
 const ProjectsData = [
   {
     id: 1,
-    image: "/Images/savor.png",
+    image: "/Images/savor2.png",
     title: "Savor",
     description: "App built at LA Hacks 2024",
     repo: "https://github.com/Kevin06x/Savor",
@@ -14,7 +14,7 @@ const ProjectsData = [
   },
   {
     id: 2,
-    image: "/Images/insightfullanterns.png",
+    image: "/Images/insightfullanterns3.png",
     title: "Insightfullanterns",
     description: "App built at Irvine Hacks 2024",
     repo: "https://github.com/Kevin06x/InsightfulLantern",
@@ -22,7 +22,7 @@ const ProjectsData = [
   },
   {
     id: 3,
-    image: "/Images/web_logo.png",
+    image: "/Images/web_logo2.png",
     title: "Kevin's Web Blog Post",
     description: "A Web Blog Post built for Kevin K Kevin Kevin Kevin",
     repo: "https://github.com/Kevin06x/Web-Blog-Post",
@@ -65,7 +65,7 @@ const ProjectCards = () => {
     <>
       <div className='container mx-auto'>
         <div className='text-center text-white font-bold mb-14 mt-5 sm:mt-0 text-xl'>
-          <h1 className=' text-4xl pb-5' style={{ fontFamily: 'Rowdies, sans-serif', fontWeight: 600, fontStyle: 'normal' }}>Projects Section</h1>
+          <h1 className=' text-4xl pb-5' style={{ fontFamily: 'Rowdies, sans-serif', fontWeight: 600, fontStyle: 'normal' }}><u>Projects Section</u></h1>
           <span ref={typingRef}>
             {isVisible && startTyping && (
               <TypeAnimation
@@ -85,7 +85,7 @@ const ProjectCards = () => {
           {ProjectsData.map(({ id, image, title, description, demo, repo }) => {
             return (
               <div key={id} className='text-white shadow-md rounded-lg overflow-hidden relative group'>
-                <img src={image} alt={title} className='w-full max-w-[350px] h-[300px] rounded-lg' />
+                <img src={image} alt={title} className='w-full max-w-[400px] h-[300px] rounded-lg' />
                 <div className='absolute left-0 top-[-100%] text-white opacity-0 group-hover:opacity-100 group-hover:top-[0] p-4 w-full h-full bg-black/60 backdrop-blur-sm duration-500'>
                   <div className='space-y-4'>
                     <Slide cascade>
