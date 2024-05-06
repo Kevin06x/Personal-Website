@@ -85,7 +85,7 @@ const ProjectCards = () => {
           {ProjectsData.map(({ id, image, title, description, demo, repo }) => {
             return (
               <div key={id} className='text-white shadow-md rounded-lg overflow-hidden relative group'>
-                <img src={image} alt={title} className='w-full max-w-[400px] h-[300px] rounded-lg' />
+                <img src={image} alt={title} className='w-full max-w-[350px] h-[300px] rounded-lg' />
                 <div className='absolute left-0 top-[-100%] text-white opacity-0 group-hover:opacity-100 group-hover:top-[0] p-4 w-full h-full bg-black/60 backdrop-blur-sm duration-500'>
                   <div className='space-y-4'>
                     <Slide cascade>
