@@ -61,6 +61,12 @@ const ProjectCards = () => {
     }
   }, [isVisible]);
 
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleHover = () => {
+    setIsHovered(!isHovered);
+  };
+
   return (
     <>
       <div className='container mx-auto'>
@@ -94,8 +100,22 @@ const ProjectCards = () => {
                         {description}
                       </div>
                       <div style={{ fontFamily: 'Source Code Pro, monospace', fontWeight: 600, fontStyle: 'normal' }}>
-                        <a href={repo} target="_blank"><button className='border border-white px-4 py-2 rounded-lg hover:bg-black/20 duration-300'>Repository</button></a>
-                        <a href={demo} target="_blank"><button className='border border-white px-4 py-2 ml-4 rounded-lg hover:bg-black/20 duration-300'>Demo</button></a>
+                        <a href={repo} target="_blank">
+                          <button className={`border border-white px-4 py-2 rounded-lg hover:bg-black/20  transition-transform duration-300 transform hover:scale-105 ${
+                              isHovered ? 'shadow-lg' : ''
+                            }`}
+                            onMouseEnter={handleHover}
+                            onMouseLeave={handleHover}>
+                              Repository
+                              </button></a>
+                        <a href={demo} target="_blank">
+                          <button className={`border border-white px-4 py-2 ml-4 rounded-lg hover:bg-black/20 transition-transform duration-300 transform hover:scale-105 ${
+                              isHovered ? 'shadow-lg' : ''
+                            }`}
+                            onMouseEnter={handleHover}
+                            onMouseLeave={handleHover}>
+                            Demo
+                            </button></a>
                       </div>
                     </Slide>
                     </div>

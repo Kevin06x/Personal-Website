@@ -37,7 +37,7 @@ const HeroSection = () => {
            Welcome to my Portfolio Website! Here you can see all of my Projects, Experiences, and Skills that I&apos;ve built as a Programmer. However, if you want to know about me more as a person, then there&apos;s that too! 
            If you feel the need to contact me or want more information then feel free to click on one of the links below.
           </p>
-<div>
+        <div>
           <a href="https://github.com/Kevin06x" target="_blank">
             <button className={`px-1 py-1 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-400 via-blue-600 to-blue-800 hover:bg-slate-100 text-white mt-3 transition-transform duration-300 transform hover:scale-105 ${
           isHovered ? 'shadow-lg' : ''
