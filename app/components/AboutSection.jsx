@@ -46,7 +46,7 @@ return (
         <Image src='/Images/pfpbig.jpg' alt='Profile' layout="fill" style={{borderRadius:'15px', objectFit: "cover"}} />
              </div>
             <div className='mt-4 md:mt-0 text-l flex flex-col h-full'>
-                <h2 className='text-4xl font-bold text-white mb-4 pt-5' style={{fontFamily:'Rowdies, sans-serif', fontWeight: 600, fontStyle: 'normal'}}>About Me</h2>
+                <h2 className='text-4xl font-bold text-white mb-4 pt-5' style={{fontFamily:'Rowdies, sans-serif', fontWeight: 600, fontStyle: 'normal'}}><u>About Me</u></h2>
                 <p className='md:text-lg text-[#ADB7BE] sm:text-lg text-lg mb-6 lg:text-xl font-bold' style={{fontFamily: 'Source Code Pro, monospace', fontWeight: 600, fontStyle: 'normal'}}> I am a undergraduate Computer Science Student that is graduating in 2026 with a burning passion to learn
                     more about programming and love the process of creating/designing. I have experience working with React, React Native, JavaScript, Node.js,
                     Express.js, HTML, CSS, Git, Python, Java, C++, and many other technologies. I am a quick learner and I am always looking to expand
