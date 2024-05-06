@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Image from "next/image";
 import { TypeAnimation } from 'react-type-animation'
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const HeroSection = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -43,9 +44,10 @@ const HeroSection = () => {
           isHovered ? 'shadow-lg' : ''
         }`}
         onMouseEnter={handleHover}
-        onMouseLeave={handleHover}>
+        onMouseLeave={handleHover}
+        >
                 <span className='block bg-[#121212] rounded-full px-10 py-2'>
-                  <strong className='text-lg' style={{fontFamily: 'Source Code Pro, monospace', fontWeight: 600, fontStyle: 'normal'}}>Github</strong></span>
+                  <strong className='text-lg' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', fontFamily: 'Source Code Pro, monospace', fontWeight: 600, fontStyle: 'normal'}}><FaGithub className='mr-2'/>Github</strong></span>
             </button>
             </a>
             <a href="https://www.linkedin.com/in/kevin06x/" target='_blank'>
@@ -53,9 +55,10 @@ const HeroSection = () => {
           isHovered ? 'shadow-lg' : ''
         }`}
         onMouseEnter={handleHover}
-        onMouseLeave={handleHover}>
+        onMouseLeave={handleHover}
+        >
                   <span className='block bg-[#121212] rounded-full px-10 py-2'>
-                    <strong className='text-lg' style={{fontFamily: 'Source Code Pro, monospace', fontWeight: 600, fontStyle: 'normal'}}>LinkedIn</strong></span>
+                    <strong className='text-lg' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', fontFamily: 'Source Code Pro, monospace', fontWeight: 600, fontStyle: 'normal'}}><FaLinkedin className='mr-2'/>LinkedIn</strong></span>
               </button>
             </a>
           </div>
