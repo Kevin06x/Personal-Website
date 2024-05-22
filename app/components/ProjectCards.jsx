@@ -87,15 +87,15 @@ const ProjectCards = () => {
             )}
           </span>
         </div>
-        <div className='grid sm:grid-cols-1 lg:grid-cols-3 place-items-center gap-6'>
+        <div className='grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 place-items-center gap-6'>
           {ProjectsData.map(({ id, image, title, description, demo, repo }) => {
             return (
               <div key={id} className='text-white shadow-md rounded-lg overflow-hidden relative group'>
-                <img src={image} alt={title} className='w-full max-w-[500px] lg:max-h-[250px] rounded-lg max-h-[300px]' />
+                <img src={image} alt={title} className='h-[300px] rounded-lg w-[400px]' />
                 <div className='absolute left-0 top-[-100%] text-white opacity-0 group-hover:opacity-100 group-hover:top-[0] p-4 w-full h-full bg-black/60 backdrop-blur-sm duration-500'>
                   <div className='space-y-4'>
                     <Slide cascade>
-                      <h1 className='text-3xl font-bold' style={{ fontFamily: 'Source Code Pro, monospace', fontWeight: 600, fontStyle: 'normal' }}>{title}</h1>
+                      <h1 className='text-2xl font-bold' style={{ fontFamily: 'Source Code Pro, monospace', fontWeight: 600, fontStyle: 'normal' }}>{title}</h1>
                       <div className="description-container sm:overflow-y-auto sm:max-h-[85px]" style={{ fontFamily: 'Source Code Pro, monospace', fontWeight: 600, fontStyle: 'normal' }}>
                         {description}
                       </div>
