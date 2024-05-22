@@ -8,7 +8,7 @@ const ProjectsData = [
     id: 1,
     image: "/Images/savor2.png",
     title: "Savor",
-    description: "App built at LA Hacks 2024",
+    description: "An AI recipe-generating app, leveraging the use of Gemini API, Firebase, and React Native to build an application that promotes eco-friendliness and prevent food waste anywhere, anytime.",
     repo: "https://github.com/Kevin06x/Savor",
     demo: "https://www.youtube.com/watch?v=KScPfhTnDr8",
   },
@@ -16,7 +16,7 @@ const ProjectsData = [
     id: 2,
     image: "/Images/insightfullanterns3.png",
     title: "Insightfullanterns",
-    description: "App built at Irvine Hacks 2024",
+    description: "A theraupeutic environment for annonymous users to share and speak about their hardships. Built with React, Firebase, and Google Entity & Sentiment analysis API.",
     repo: "https://github.com/Kevin06x/InsightfulLantern",
     demo: "https://insightfullantern.vercel.app/",
   },
@@ -24,7 +24,7 @@ const ProjectsData = [
     id: 3,
     image: "/Images/web_logo2.png",
     title: "Kevin's Web Blog Post",
-    description: "A Web Blog Post built for Kevin K Kevin Kevin Kevin",
+    description: "The Website was built through DJango, which allows seamless customization, data authorization, and design. It was built to store and keep my accomplishments throughout the years for others to see my journey as a programmer!",
     repo: "https://github.com/Kevin06x/Web-Blog-Post",
     demo: "https://kevin06x.pythonanywhere.com/",
   },
@@ -96,7 +96,7 @@ const ProjectCards = () => {
                   <div className='space-y-4'>
                     <Slide cascade>
                       <h1 className='text-2xl font-bold' style={{ fontFamily: 'Source Code Pro, monospace', fontWeight: 600, fontStyle: 'normal' }}>{title}</h1>
-                      <div className="description-container sm:overflow-y-auto sm:max-h-[85px]" style={{ fontFamily: 'Source Code Pro, monospace', fontWeight: 600, fontStyle: 'normal' }}>
+                      <div className="description-container sm:overflow-y-auto max-h-[200px]" style={{ fontFamily: 'Source Code Pro, monospace', fontWeight: 600, fontStyle: 'normal' }}>
                         {description}
                       </div>
                       <div style={{ fontFamily: 'Source Code Pro, monospace', fontWeight: 600, fontStyle: 'normal' }}>
