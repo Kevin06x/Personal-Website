@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Image from "next/image";
 import { TypeAnimation } from 'react-type-animation'
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const HeroSection = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -13,7 +14,11 @@ const HeroSection = () => {
   return (
     <section className="container mx-auto px-4 lg:px-0">
       <div className='grid grid-cols-1 lg:grid-cols-12 gap-4'>
-        <div className="col-span-7 lg:col-span-7 flex flex-col justify-center text-center sm:text-left">
+        <motion.div 
+            initial={{ opacity: 0, scale: 0.5}}
+            animate={{ opacity: 1, scale: 1}}
+            transition={{ duration: 0.5}}
+            className="col-span-7 lg:col-span-7 flex flex-col justify-center text-center sm:text-left">
           <h1 className="text-white mb-4 text-3xl sm:text-5xl  lg:text-6xl font-extrabold ">
                 <span className='text-transparent bg-clip-text bg-gradient-to-r from-zinc-200 via-zinc-300 to-zinc-400' style={{fontFamily:'Rowdies, sans-serif', fontWeight: 600, fontStyle: 'normal'}}>Hello, I&apos;m Kevin,{" "}</span>
                 <br></br>
@@ -62,8 +67,12 @@ const HeroSection = () => {
               </button>
             </a>
           </div>
-        </div>
-        <div className='col-span-5 lg:col-span-5 flex justify-center lg:justify-end'>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5}}
+          animate={{ opacity: 1, scale: 1}}
+          transition={{ duration: 0.5}}
+          className='col-span-5 lg:col-span-5 flex justify-center lg:justify-end'>
           <div className="rounded-full w-[300px] h-[300px] lg:w-[350px] lg:h-[350px] relative pl-8 hidden lg:block">
                 <Image
                   src="/Images/main.jpg"
@@ -73,7 +82,7 @@ const HeroSection = () => {
                   style = {{borderRadius:"50%"}}
                 />
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

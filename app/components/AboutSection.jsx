@@ -53,7 +53,7 @@ return (
                     my knowledge and skill set through practical experiences and collabrations. If you have any cool ideas or want to collaberate then 
                     definitely let me know!
                 </p>
-<div className='flex sm:flex-row flex-col mt-8'>
+<div className='flex flex-col justify-start mt-8 sm:flex-row'>
                     <TabButton selectTab={() => handleTabChange("skills")} active={tab === "skills"}>
                         Skills
                     </TabButton>
