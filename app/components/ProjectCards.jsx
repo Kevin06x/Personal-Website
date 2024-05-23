@@ -24,7 +24,7 @@ const ProjectsData = [
     id: 3,
     image: "/Images/web_logo2.png",
     title: "Kevin's Web Blog Post",
-    description: "The Website was built through DJango, which allows seamless customization, data authorization, and design. It was built to store and keep my accomplishments throughout the years for others to see my journey as a programmer!",
+    description: "The Website was built through DJango, which allows seamless customization, data authorization, and design. It was built to record my journey as a programmer!",
     repo: "https://github.com/Kevin06x/Web-Blog-Post",
     demo: "https://kevin06x.pythonanywhere.com/",
   },
