@@ -73,15 +73,16 @@ const HeroSection = () => {
           animate={{ opacity: 1, scale: 1}}
           transition={{ duration: 0.5}}
           className='col-span-5 lg:col-span-5 flex justify-center lg:justify-end'>
-          <div className="rounded-full w-[300px] h-[300px] lg:w-[350px] lg:h-[350px] relative pl-8 hidden lg:block">
-                <Image
-                  src="/Images/main.jpg"
-                  alt="Main Image"
-                  width={400}
-                  height={400}
-                  style = {{borderRadius:"50%"}}
-                />
+          <div className="rounded-full w-[300px] h-[300px] lg:w-[350px] lg:h-[350px] relative pl-8 hidden lg:block overflow-hidden">
+            <Image
+              src="/Images/main2.jpg"
+              alt="Main Image"
+              layout="fill"
+              objectFit="cover"
+              className="rounded-full"
+            />
           </div>
+
         </motion.div>
       </div>
     </section>
