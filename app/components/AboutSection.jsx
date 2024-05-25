@@ -5,6 +5,7 @@ import TabButton from './TabButton';
 import SkillsList from './SkillsList';
 import EducationSection from './EducationSection';
 import ExperienceSection from './ExperienceSection';
+import { motion } from 'framer-motion';
 
 const TAB_DATA = [
     {
@@ -42,10 +43,19 @@ const AboutSection = () => {
 return (
     <section className='text-white'>
         <div className='md:grid md:grid-cols-[auto,1fr] gap-8 items-start py-8 px-4 xl:gap-16 sm:py-16 xl:py-16 h-fit'>
-        <div className="relative w-full h-[400px] sm:w-80 md:h-[500px]" style={{ paddingBottom: '75%' }}>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5}}
+          animate={{ opacity: 1, scale: 1}}
+          transition={{ duration: 0.5}}
+          className="relative w-full h-[400px] sm:w-80 md:h-[500px]" style={{ paddingBottom: '75%' }}>
+            
         <Image src='/Images/pfpbig.jpg' alt='Profile' layout="fill" style={{borderRadius:'15px', objectFit: "cover"}} />
-             </div>
-            <div className='mt-4 md:mt-0 text-l flex flex-col h-full'>
+             </motion.div>
+            <motion.div
+                initial={{ opacity: 0, scale: 0.5}}
+                animate={{ opacity: 1, scale: 1}}
+                transition={{ duration: 0.5}}
+                className='mt-4 md:mt-0 text-l flex flex-col h-full'>
                 <h2 className='text-4xl font-bold text-white mb-4 pt-5' style={{fontFamily:'Rowdies, sans-serif', fontWeight: 600, fontStyle: 'normal'}}><u>About Me</u></h2>
                 <p className='md:text-lg text-[#ADB7BE] sm:text-lg text-lg mb-6 lg:text-xl font-bold' style={{fontFamily: 'Source Code Pro, monospace', fontWeight: 600, fontStyle: 'normal'}}> I am a undergraduate Computer Science Student that is graduating in 2026 with a burning passion to learn
                     more about programming and love the process of creating/designing. I have experience working with React, React Native, JavaScript, Node.js,
@@ -67,7 +77,7 @@ return (
                 <div className='mt-8' style={{ minHeight: '150px' }}>
                     {TAB_DATA.find((t) => t.id === tab).content}
                 </div>
-            </div>
+            </motion.div>
         </div>
     </section>
   );

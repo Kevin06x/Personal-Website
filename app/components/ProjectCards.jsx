@@ -2,6 +2,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Slide } from 'react-awesome-reveal';
 import { TypeAnimation } from 'react-type-animation';
+import { motion } from 'framer-motion';
 
 const ProjectsData = [
   {
@@ -29,6 +30,8 @@ const ProjectsData = [
     demo: "https://kevin06x.pythonanywhere.com/",
   },
 ];
+
+const FutureProjectsData = [];
 
 const ProjectCards = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -69,7 +72,11 @@ const ProjectCards = () => {
 
   return (
     <>
-      <div className='container mx-auto'>
+      <motion.div
+            initial={{ opacity: 0, scale: 0.5}}
+            animate={{ opacity: 1, scale: 1}}
+            transition={{ duration: 0.5}} 
+            className='container mx-auto'>
         <div className='text-center text-white font-bold mb-14 mt-5 sm:mt-0 text-xl'>
           <h1 className=' text-4xl pb-5' style={{ fontFamily: 'Rowdies, sans-serif', fontWeight: 600, fontStyle: 'normal' }}><u>Projects Section</u></h1>
           <span ref={typingRef}>
@@ -124,7 +131,7 @@ const ProjectCards = () => {
             );
           })}
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

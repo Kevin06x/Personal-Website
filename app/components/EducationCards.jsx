@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Image from "next/image";
 
-const EducationCards = ({ imgUrl, title, degree, link }) => {
+const EducationCards = ({ imgUrl, title, degree, time, link }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleHover = () => {
@@ -23,6 +23,7 @@ const EducationCards = ({ imgUrl, title, degree, link }) => {
         <div className='pt-1 text-[#BFBABA] font-bold rounded-b-xl text-center md:text-lg' style={{ fontFamily: 'Source Code Pro, monospace', fontWeight: 900, fontStyle: 'normal' }}>
           <h5 className='pt-1 md:pt-4 text-lg'>{title}</h5>
           <h6 className='text-sm' style={{fontStyle:"italic"}}>{degree}</h6>
+          <h7 className='text-sm' style={{fontStyle:"italic"}}>{time}</h7>
         </div>
       </div>
     </a>
