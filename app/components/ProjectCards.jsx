@@ -31,12 +31,38 @@ const ProjectsData = [
   },
 ];
 
-const FutureProjectsData = [];
+const FutureProjectsData = [
+  {
+    id: 4,
+    image: "/Images/pocket2.png",
+    title: "Pocket Monsters",
+    description: "TBD",
+    repo: "https://github.com/Kevin06x/Pocket-Monsters",
+  },
+  {
+    id: 5,
+    image: "/Images/chat2.png",
+    title: "Community",
+    description: "TBD",
+    repo: "https://github.com/Kevin06x",
+  },
+  {
+    id: 6,
+    image: "/Images/minecraft2.png",
+    title: "LOTM Mod",
+    description: "TBD",
+    repo: "https://github.com/Kevin06x/Web-Blog-Post",
+  },
+];
 
 const ProjectCards = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [startTyping, setStartTyping] = useState(false);
   const typingRef = useRef(null);
+
+  const [isFutureVisible, setIsFutureVisible] = useState(false);
+  const [startFutureTyping, setStartFutureTyping] = useState(false);
+  const futureTypingRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -63,6 +89,32 @@ const ProjectCards = () => {
       return () => clearTimeout(timer);
     }
   }, [isVisible]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setIsFutureVisible(true);
+        }
+      });
+    });
+
+    observer.observe(futureTypingRef.current);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isFutureVisible) {
+      const timer = setTimeout(() => {
+        setStartFutureTyping(true);
+      }, 3000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [isFutureVisible]);
 
   const [isHovered, setIsHovered] = useState(false);
 
@@ -99,7 +151,7 @@ const ProjectCards = () => {
           {ProjectsData.map(({ id, image, title, description, demo, repo }) => {
             return (
               <div key={id} className='text-white shadow-md rounded-lg overflow-hidden relative group'>
-                <img src={image} alt={title} className='h-[300px] rounded-lg w-[400px]' />
+                <img src={image} alt={title} className='rounded-lg w-[400px] h-[300px]' />
                 <div className='absolute left-0 top-[-100%] text-white opacity-0 group-hover:opacity-100 group-hover:top-[0] p-4 w-full h-full bg-black/60 backdrop-blur-sm duration-500'>
                   <div className='space-y-4'>
                     <Slide cascade>
@@ -124,6 +176,53 @@ const ProjectCards = () => {
                             onMouseLeave={handleHover}>
                             Demo
                             </button></a>
+                      </div>
+                    </Slide>
+                    </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        <div ref={futureTypingRef} className='text-center text-white font-bold mb-14 pt-5 sm:mt-0 text-xl'>
+          <span>
+            {isFutureVisible && startFutureTyping && (
+              <TypeAnimation
+                sequence={[
+                  "Things that I'm doing.",
+                  1000,
+                ]}
+                wrapper="span"
+                speed={20}
+                repeat={0}
+                style={{ fontFamily: 'Source Code Pro, monospace', fontWeight: 600, fontStyle: 'normal' }}
+              />
+            )}
+          </span>
+        </div>
+
+        <div className='grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 place-items-center gap-6'>
+          {FutureProjectsData.map(({ id, image, title, description, repo }) => {
+            return (
+              <div key={id} className='text-white shadow-md rounded-lg overflow-hidden relative group'>
+                <img src={image} alt={title} className='h-[300px] rounded-lg w-[400px]' />
+                <div className='absolute left-0 top-[-100%] text-white opacity-0 group-hover:opacity-100 group-hover:top-[0] p-4 w-full h-full bg-black/60 backdrop-blur-sm duration-500'>
+                  <div className='space-y-4'>
+                    <Slide cascade>
+                      <h1 className='text-2xl font-bold' style={{ fontFamily: 'Source Code Pro, monospace', fontWeight: 600, fontStyle: 'normal' }}>{title}</h1>
+                      <div className="description-container sm:overflow-y-auto max-w-[300px] max-h-[200px]" style={{ fontFamily: 'Source Code Pro, monospace', fontWeight: 600, fontStyle: 'normal' }}>
+                        {description}
+                      </div>
+                      <div style={{ fontFamily: 'Source Code Pro, monospace', fontWeight: 600, fontStyle: 'normal' }}>
+                        <a href={repo} target="_blank">
+                          <button className={`border border-white px-4 py-2 rounded-lg hover:bg-black/20  transition-transform duration-300 transform hover:scale-105 ${
+                              isHovered ? 'shadow-lg' : ''
+                            }`}
+                            onMouseEnter={handleHover}
+                            onMouseLeave={handleHover}>
+                              Repository
+                              </button></a>
                       </div>
                     </Slide>
                     </div>
