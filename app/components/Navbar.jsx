@@ -10,7 +10,7 @@ import Image from 'next/image';
 const navLinks = [
     {
         title: "About",
-        path: "#about",
+        path: "about",
     },
     // {
     //     title: "Experience",
@@ -18,11 +18,11 @@ const navLinks = [
     // },
     {
         title: "Projects",
-        path: "#projects",
+        path: "projects",
     },
     {
         title: "Contact",
-        path: "#contact"
+        path: "contact"
     },
 ]
 
