@@ -103,7 +103,7 @@ const ProjectCards = () => {
                   <div className='space-y-4'>
                     <Slide cascade>
                       <h1 className='text-2xl font-bold' style={{ fontFamily: 'Source Code Pro, monospace', fontWeight: 600, fontStyle: 'normal' }}>{title}</h1>
-                      <div className="description-container sm:overflow-y-auto max-h-[200px]" style={{ fontFamily: 'Source Code Pro, monospace', fontWeight: 600, fontStyle: 'normal' }}>
+                      <div className="description-container sm:overflow-y-auto max-w-[300px] max-h-[200px]" style={{ fontFamily: 'Source Code Pro, monospace', fontWeight: 600, fontStyle: 'normal' }}>
                         {description}
                       </div>
                       <div style={{ fontFamily: 'Source Code Pro, monospace', fontWeight: 600, fontStyle: 'normal' }}>
