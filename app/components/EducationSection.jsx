@@ -4,11 +4,11 @@ import EducationCards from './EducationCards';
 const educationData = [
     {
         id: 1,
-        title: "UC Irvine",
-        image: "/Images/uci2.png",
+        title: "UC Santa Cruz",
+        image: "/Images/ucsc2.png",
         degree: 'Computer Science B.S',
         time: '2024 - 2026',
-        link: "https://uci.edu/",
+        link: "https://www.ucsc.edu/",
     },
     {
         id: 2,
