@@ -12,7 +12,7 @@ const HeroSection = () => {
     setIsHovered(!isHovered);
   };
   return (
-    <section id='contact' className="container mx-auto px-4 lg:px-0">
+    <section className="container mx-auto px-4 lg:px-0">
       <div className='grid grid-cols-1 lg:grid-cols-12 gap-4'>
         <motion.div 
             initial={{ opacity: 0, scale: 0.5}}
