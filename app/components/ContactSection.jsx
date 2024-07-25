@@ -24,6 +24,7 @@ const ContactSection = () => {
     
       return (
         <section id='contact'
+        className='mb-20'
             style={{
                 flexDirection: 'column',
                 alignContent: 'center',
@@ -37,13 +38,13 @@ const ContactSection = () => {
             <div className='md:grid md:grid-cols-[auto,1fr] gap-10 items-start'
             >
                 <Image
-                    src="/Images/main.jpg"
+                    src="/Images/main2.jpg"
                     alt="Main Image"
                     width={250}
                     height={250}
                     className='mt-5 lg:block hidden'
                     style={{
-                    borderRadius: '50%',
+                    borderRadius: '5%',
                     width: '100%',
                     maxWidth: '350px',
                     height: 'auto',
