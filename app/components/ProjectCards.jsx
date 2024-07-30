@@ -122,6 +122,28 @@ const ProjectCards = () => {
     setIsHovered(!isHovered);
   };
 
+  const headerStyle = {
+    color: 'white',
+    fontWeight: 600,
+    fontSize: '2.5rem',
+    textAlign: 'center',
+    display: 'flex',
+    alignItems: 'end',
+    gap: '1rem',
+    justifyContent: 'center',
+    fontFamily:'Rowdies, sans-serif'
+  };
+
+  const lineStyle = {
+    content: '""',
+    height: '4px',
+    width: '50%',
+    maxWidth: '500px',
+    backgroundColor: 'white',
+    display: 'block'
+  };
+  
+
   return (
     <>
       <motion.div
@@ -129,9 +151,12 @@ const ProjectCards = () => {
             initial={{ opacity: 0, scale: 0.5}}
             animate={{ opacity: 1, scale: 1}}
             transition={{ duration: 0.5}} 
-            className='container mx-auto'>
-        <div className='text-center text-white font-bold mb-14 mt-5 sm:mt-0 text-xl'>
-          <h1 className=' text-4xl pb-5' style={{ fontFamily: 'Rowdies, sans-serif', fontWeight: 600, fontStyle: 'normal' }}><u>Projects Section</u></h1>
+            className='container mx-auto'
+            >
+        <div className='text-center text-white font-bold mb-14 mt-5 sm:mt-0 text-xl' >
+        <div className='mb-5' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '1rem'}}>
+          <div style={lineStyle}></div><h3 style={headerStyle}>Projects</h3> <div style={lineStyle}></div>
+        </div>
           <span ref={typingRef}>
             {isVisible && startTyping && (
               <TypeAnimation

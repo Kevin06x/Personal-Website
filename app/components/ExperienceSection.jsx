@@ -4,28 +4,36 @@ import 'react-vertical-timeline-component/style.min.css';
 import ExperienceCard from './ExperienceCard';
 import { FaDatabase, FaBook  } from "react-icons/fa";
 import { GiChicken } from "react-icons/gi";
+import { HiDesktopComputer } from "react-icons/hi";
 
 const experiences = [
+  {
+    title: "SWE Fellow - Headstarter AI",
+    icon: <HiDesktopComputer />,
+    iconBg: "black",
+    date: "July 2024 - September 2024",
+    description: "Software Engineering Fellowship at Headstarter AI",
+  },
   {
     title: "Data Analyst - Orange Coast College",
     icon: <FaDatabase/>,
     iconBg: "black",
     date: "October 2023 - Present",
-    description: "I Worked as a Data Analyst",
+    description: "Data Analyst for AIM Program under Orange Coast College",
   },
   {
     title: "Cashier - Chicciety",
     icon: <GiChicken />,
     iconBg: "black",
     date: "November 2022 - July 2023",
-    description: "I worked as a Cashier",
+    description: "Cashier, Customer Service, and Stock Management at Chicciety",
   },
   {
     title: "Bookseller - Barnes & Nobles",
     icon: <FaBook />,
     iconBg: "black",
     date: "August - September 2022/2023",
-    description: "I worked as a Bookseller",
+    description: "Cashier, Bookseller, and Organizer at College Bookstore",
   },
 ];
 

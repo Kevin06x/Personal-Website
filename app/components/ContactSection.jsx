@@ -1,5 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
+import { MdEmail } from "react-icons/md"
+import { FaInstagram, FaYoutube, FaDiscord, FaSpotify  } from "react-icons/fa"
+
 
 const ContactSection = () => {
     const headerStyle = {
@@ -17,14 +20,15 @@ const ContactSection = () => {
       const lineStyle = {
         content: '""',
         height: '4px',
-        width: '600px',
+        width: '50%',
+        maxWidth: '500px',
         backgroundColor: 'white',
         display: 'block'
       }
     
       return (
         <section id='contact'
-        className='mb-20'
+        className='mb-10'
             style={{
                 flexDirection: 'column',
                 alignContent: 'center',
@@ -38,21 +42,49 @@ const ContactSection = () => {
             <div className='md:grid md:grid-cols-[auto,1fr] gap-10 items-start'
             >
                 <Image
-                    src="/Images/main2.jpg"
-                    alt="Main Image"
-                    width={250}
-                    height={250}
-                    className='mt-5 lg:block hidden'
-                    style={{
-                    borderRadius: '5%',
-                    width: '100%',
-                    maxWidth: '350px',
-                    height: 'auto',
-                    objectFit: 'cover'
-                    }}
-                />
-                <h1 className='mt-8 text-[#ADB7BE] flex flex-col text-xl text-center lg:pr-10 ' style={{ justifySelf: 'end', fontFamily: 'Source Code Pro, monospace', fontWeight: 600, fontStyle: 'normal'}}> EMAIL: kevinzh06x@gmail.com
-                </h1>
+                  src="/Images/main.1.jpg"
+                  alt="Main Image"
+                  width={250}
+                  height={250}
+                  className='mt-5 lg:block hidden'
+                  style={{
+                      borderRadius: '50%',
+                      width: '100%',
+                      maxWidth: '200px',
+                      height: '200px', 
+                      objectFit: 'cover',
+                      border: '5px solid #BFBABA'
+                  }}
+              />
+
+              <div className='mt-8 text-[#ADB7BE] flex flex-col text-xl text-center' style={{ justifySelf: 'end', fontFamily: 'Source Code Pro, monospace', fontWeight: 600, fontStyle: 'normal' }}>
+                  <div className='flex items-center justify-center'>
+                    <MdEmail className='text-4xl mr-2' />
+                    <h1>kevinzh06x@gmail.com</h1>
+                  </div>
+                  <div className='flex justify-center gap-4 mt-10'>
+                    <a href='https://instagram.com/Kevin06x' target='_blank' rel='noopener noreferrer'>
+                      <button className='p-2 rounded-full hover:bg-gray-300 transition'>
+                        <FaInstagram className='text-5xl' />
+                      </button>
+                    </a>
+                    <a href='https://youtube.com/@KevinZhang06x' target='_blank' rel='noopener noreferrer'>
+                      <button className='p-2 rounded-full hover:bg-gray-300 transition'>
+                        <FaYoutube className='text-5xl' />
+                      </button>
+                    </a>
+                    <a href='https://discordapp.com/users/Kevin06x' target='_blank' rel='noopener noreferrer'>
+                      <button className='p-2 rounded-full hover:bg-gray-300 transition'>
+                        <FaDiscord className='text-5xl' />
+                      </button>
+                    </a>
+                    <a href='https://open.spotify.com/user/31zupvaniwm7fwfkmpgpgxyjesbe?si=d5EocYSzSH21JqfenxLgGA' target='_blank' rel='noopener noreferrer'>
+                      <button className='p-2 rounded-full hover:bg-gray-300 transition'>
+                        <FaSpotify className='text-5xl' />
+                      </button>
+                    </a>
+                  </div>
+                </div>
             </div>
         </section>
 
